@@ -1,29 +1,34 @@
-# Data Warehouse and Analytics Project
+# 🏗️ Retail Data Warehouse Project
 
-Welcome to the **Data Warehouse and Analytics Project** repository! 🚀  
-This project demonstrates a comprehensive data warehousing and analytics solution, from building a data warehouse to generating actionable insights. Designed as a portfolio project, it highlights industry best practices in data engineering and analytics.
-
----
-## 🏗️ Data Architecture
-
-The data architecture for this project follows Medallion Architecture **Bronze**, **Silver**, and **Gold** layers:
-![Data Architecture](Documents/data_architecture.png)
-
-1. **Bronze Layer**: Stores raw data as-is from the source systems. Data is ingested from CSV Files into SQL Server Database.
-2. **Silver Layer**: This layer includes data cleansing, standardization, and normalization processes to prepare data for analysis.
-3. **Gold Layer**: Houses business-ready data modeled into a star schema required for reporting and analytics.
+A data warehouse project for retail sales analytics using SQL Server, ETL processes, and dimensional modeling.
 
 ---
-## 📖 Project Overview
 
-This project involves:
+## 📌 Project Overview
+This project demonstrates the design and implementation of a retail data warehouse to support business intelligence and analytical reporting.
 
-1. **Data Architecture**: Designing a Modern Data Warehouse Using Medallion Architecture **Bronze**, **Silver**, and **Gold** layers.
-2. **ETL Pipelines**: Extracting, transforming, and loading data from source systems into the warehouse.
-3. **Data Modeling**: Developing fact and dimension tables optimized for analytical queries.
-4. **Analytics & Reporting**: Creating SQL-based reports and dashboards for actionable insights.
+The solution integrates data from multiple sources (ERP & CRM), applies ETL transformations, and structures data into a star schema optimized for analytical queries and insights.
 
-🎯 This repository is an excellent resource for professionals and students looking to showcase expertise in:
+
+💎This project involves:
+
+1. *Data Architecture*: Designing a Modern Data Warehouse Using Medallion Architecture **Bronze, **Silver, and **Gold* layers.
+2. *ETL Pipelines*: Extracting, transforming, and loading data from source systems into the warehouse.
+3. *Data Modeling*: Developing fact and dimension tables optimized for analytical queries.
+4. *Analytics & Reporting*: Creating SQL-based reports and dashboards for actionable insights.
+   
+---
+
+## 🎯 Objectives
+- Build a scalable retail data warehouse
+- Apply ETL processes (Extract, Transform, Load)
+- Design fact and dimension tables
+- Ensure data quality and consistency
+- Enable analytical reporting for decision-making
+
+---
+
+## 🎯 This repository is an excellent resource for professionals and students looking to showcase expertise in:
 - SQL Development
 - Data Architect
 - Data Engineering  
@@ -33,47 +38,60 @@ This project involves:
 
 ---
 
-## 🛠️ Important Links & Tools:
-
-Everything is for Free!
-- **[Datasets](datasets/):** Access to the project dataset (csv files).
-- **[SQL Server Express](https://www.microsoft.com/en-us/sql-server/sql-server-downloads):** Lightweight server for hosting your SQL database.
-- **[SQL Server Management Studio (SSMS)](https://learn.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver16):** GUI for managing and interacting with databases.
-- **[Git Repository](https://github.com/):** Set up a GitHub account and repository to manage, version, and collaborate on your code efficiently.
-- **[DrawIO](https://www.drawio.com/):** Design data architecture, models, flows, and diagrams.
-- **[Notion Project Steps](https://www.notion.so/Data-Warehouse-Project-297eadc54b35803b86d4d63d9b6e43e0?source=copy_link):** Access to All Project Phases and Tasks.
+## 🛠️ Tech Stack
+- SQL Server  
+- SQL  
+- ETL Concepts  
+- Data Warehousing  
+- Dimensional Modeling  
 
 ---
 
-## 🚀 Project Requirements
+## 🧱 Data Architecture
 
-### Building the Data Warehouse (Data Engineering)
+This project follows the **Medallion Architecture**:
 
-#### Objective
-Develop a modern data warehouse using SQL Server to consolidate sales data, enabling analytical reporting and informed decision-making.
+- **Bronze Layer 🟤**  
+  Raw data ingestion from source systems (CSV files, ERP, CRM)
 
-#### Specifications
-- **Data Sources**: Import data from two source systems (ERP and CRM) provided as CSV files.
-- **Data Quality**: Cleanse and resolve data quality issues prior to analysis.
-- **Integration**: Combine both sources into a single, user-friendly data model designed for analytical queries.
-- **Scope**: Focus on the latest dataset only; historization of data is not required.
-- **Documentation**: Provide clear documentation of the data model to support both business stakeholders and analytics teams.
+- **Silver Layer ⚪**  
+  Data cleaning, transformation, and standardization
+
+- **Gold Layer 🟡**  
+  Business-ready data modeled as a **Star Schema** for analytics
+
+The data architecture for this project
+![Data Architecture](Documents/data_architecture.png)
+---
+
+## ⚙️ ETL Pipeline
+
+The ETL process includes:
+
+1. Extracting data from multiple sources  
+2. Cleaning and handling missing/inconsistent values  
+3. Transforming and standardizing data  
+4. Loading structured data into dimension and fact tables  
 
 ---
 
-### BI: Analytics & Reporting (Data Analysis)
+## 📊 Data Modeling
 
-#### Objective
-Develop SQL-based analytics to deliver detailed insights into:
-- **Customer Behavior**
-- **Product Performance**
-- **Sales Trends**
+The warehouse is designed using **Star Schema**, including:
 
-These insights empower stakeholders with key business metrics, enabling strategic decision-making.  
+### Dimension Tables:
+- DimCustomer  
+- DimProduct  
+- DimDate  
+- DimStore  
 
+### Fact Table:
+- FactSales  
+
+---
 
 ## 📂 Repository Structure
-```
+
 data-warehouse-project/
 │
 ├── datasets/                           # Raw datasets used for the project (ERP and CRM data)
@@ -97,5 +115,5 @@ data-warehouse-project/
 ├── LICENSE                             # License information for the repository
 ├── .gitignore                          # Files and directories to be ignored by Git
 └── requirements.txt                    # Dependencies and requirements for the project
-```
+
 ---
